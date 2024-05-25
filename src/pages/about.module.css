@@ -1,0 +1,48 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #16213e;
+  border-radius: 10px;
+}
+
+.profileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.aboutText {
+  text-align: center;
+  color: white;
+}
+
+.aboutText h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.aboutText p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.additionalInfo {
+  margin: 20px;
+  padding: 20px;
+  background-color: #1a1a2e;
+  border-radius: 10px;
+  color: white;
+}
+
+.additionalInfo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.additionalInfo p {
+  font-size: 1.2rem;
+}

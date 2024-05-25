@@ -1,9 +1,6 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
-    title: 'personal_website',
+    title: 'Jerry Aska',
     siteUrl: 'https://www.jerryaska.com',
   },
   plugins: [

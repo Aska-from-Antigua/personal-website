@@ -1,20 +1,61 @@
-.container {
-  margin: auto;
-  max-width: 500px;
-  font-family: sans-serif;
+body {
+  background-color: black;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
 }
 
-.heading {
-  color: rebeccapurple;
+.container {
+  margin: auto;
+  max-width: 1000px;
+  padding: 20px;
 }
-.nav-links {
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #16213e;
+  padding: 20px;
+}
+
+.siteTitle {
+  font-size: 2rem;
+  color: white;
+}
+
+.navLinks {
   display: flex;
   list-style: none;
   padding-left: 0;
+  margin: 0;
+  align-items: center;
 }
-.nav-link-item {
-  padding-right: 2rem;
+
+.navLinkItem {
+  margin: 0 1rem;
 }
-.nav-link-text {
-  color: black;
+
+.navLinkText {
+  color: white;
+  text-decoration: none;
+}
+
+.navLinkText:hover {
+  color: #0f3460;
+}
+
+.ctaButton {
+  background-color: #0f3460;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 1rem;
+}
+
+.ctaButton:hover {
+  background-color: #1a1a2e;
 }
