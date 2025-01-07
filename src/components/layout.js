@@ -42,6 +42,9 @@ const Layout = ({ pageTitle, children }) => {
             <li className={navLinkItem}>
               <Link to="/contact" className={navLinkText}>Contact</Link>
             </li>
+            <li className={navLinkItem}>
+              <Link to="/calculator" className={navLinkText}>Calculator</Link>
+            </li>
             <li>
               <button className={ctaButton}>Contact Me</button>
             </li>
