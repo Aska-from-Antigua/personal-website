@@ -2,24 +2,25 @@ import React, { useState } from 'react';
 import './calculator.css';
 
 const Calculator = () => {
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('XCD');
   const [monthlyIncome, setMonthlyIncome] = useState(3000);
   const [equityAvailable, setEquityAvailable] = useState(50000);
   const [interestRate, setInterestRate] = useState(5);
   const [downpaymentRequirement, setDownpaymentRequirement] = useState(30);
   const [monthlyContributionLimit, setMonthlyContributionLimit] = useState(40);
   const [loanPeriod, setLoanPeriod] = useState(15);
-  const [borrowingPower, setBorrowingPower] = useState(0);
-  const [monthlyPayment, setMonthlyPayment] = useState(0);
-  const [totalRepayment, setTotalRepayment] = useState(0);
+  const [borrowingPower, setBorrowingPower] = useState(200000);
+  const [monthlyPayment, setMonthlyPayment] = useState(1200);
+  const [totalRepayment, setTotalRepayment] = useState(216000);
 
   const exchangeRate = 2.7;
 
   const handleCurrencyChange = (newCurrency) => {
     const rate = currency === 'USD' ? exchangeRate : 1 / exchangeRate;
-    setMonthlyIncome((prev) => (prev * rate).toFixed(2));
-    setEquityAvailable((prev) => (prev * rate).toFixed(2));
+    setMonthlyIncome((prev) => (prev * rate).toFixed(0));
+    setEquityAvailable((prev) => (prev * rate).toFixed(0));
     setCurrency(newCurrency);
+    calculateBorrowingPower();
   };
 
   const calculateBorrowingPower = () => {
@@ -38,26 +39,27 @@ const Calculator = () => {
     const monthlyPay = monthlyRate
       ? loan * monthlyRate / (1 - Math.pow(1 + monthlyRate, -totalMonths))
       : loan / totalMonths;
-    setMonthlyPayment(monthlyPay.toFixed(2));
+    setMonthlyPayment(monthlyPay.toFixed(0));
 
     const totalRepay = monthlyPay * totalMonths;
-    setTotalRepayment(totalRepay.toFixed(2));
+    setTotalRepayment(totalRepay.toFixed(0));
   };
 
   return (
     <div className="calculator">
       <h1>Loan Borrowing Power Calculator</h1>
       <div className="form-group">
-        <label>Currency:</label>
-        <select value={currency} onChange={(e) => handleCurrencyChange(e.target.value)}>
-          <option value="USD">USD</option>
+        <label htmlFor='currency'>Currency:</label>
+        <select id='currency' value={currency} onChange={(e) => handleCurrencyChange(e.target.value)}>
           <option value="XCD">XCD</option>
+          <option value="USD">USD</option>
         </select>
       </div>
 
       <div className="form-group">
-        <label>Monthly Income:</label>
+        <label htmlFor='monthly-income'>Monthly Income:</label>
         <input
+          id='monthly-income'
           type="number"
           value={monthlyIncome}
           onChange={(e) => setMonthlyIncome(Number(e.target.value))}
@@ -65,16 +67,17 @@ const Calculator = () => {
       </div>
 
       <div className="form-group">
-        <label>Downpayment / Equity Available:</label>
+        <label htmlFor='equity-available'>Downpayment / Equity Available:</label>
         <input
+          id='equity-available'
           type="number"
           value={equityAvailable}
           onChange={(e) => setEquityAvailable(Number(e.target.value))}
         />
       </div>
 
-      <button className="toggle-advanced" onClick={() => document.getElementById('advanced-settings').classList.toggle('hidden')}>
-        Advanced Settings
+      <button className="toggle-advanced" onClick={() => document.getElementById('advanced-settings').classList.toggle('hidden')} onKeyDown={() => document.getElementById('advanced-settings').classList.toggle('hidden')}>
+        &#9660; Advanced Settings
       </button>
 
       <div id="advanced-settings" className="advanced hidden">

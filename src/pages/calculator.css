@@ -1,64 +1,82 @@
+:root {
+  --primary-color: #0047ab;
+  --hover-color: #003580;
+  --background-color: #f0f8ff;
+}
+
 .calculator {
     font-family: Arial, sans-serif;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f0f8ff;
-    border: 1px solid #0047ab;
-    border-radius: 10px;
-    max-width: 500px;
+    margin: 1% auto;
+    padding: 1%;
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 3%;
+    max-width: fit-content;
   }
 
   h1 {
-    color: #0047ab;
+    color: var(--primary-color);
     text-align: center;
   }
 
   p {
-    color: #0047ab;
+    color: var(--primary-color);
   }
 
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 2%;
   }
 
   label {
     font-weight: bold;
-    color: #0047ab;
+    color: var(--primary-color);
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 1%;
   }
 
   input, select, button {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #0047ab;
+    padding: 1%;
+    font-size: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     width: 100%;
   }
 
-  input {
-    width: 95%
-  }
-
   button {
-    background-color: #0047ab;
+    background-color: var(--primary-color);
     color: white;
     cursor: pointer;
     margin-top: 10px;
   }
 
   button:hover {
-    background-color: #003580;
+    background-color: var(--hover-color);
   }
 
   .output {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #e6f2ff;
-    border: 1px solid #0047ab;
+    margin-top: 3%;
+    padding: 1%;
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
   }
 
   .hidden {
     display: none;
   }
+
+  .toggle-advanced {
+    text-align: center;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.toggle-advanced:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+    background-color: var(--background-color);
+}

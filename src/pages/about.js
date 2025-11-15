@@ -6,12 +6,11 @@ import {
   aboutContainer,
   profileImage,
   aboutText,
-  additionalInfo,
 } from './about.module.css'
 
 const AboutPage = () => {
   return (
-    <Layout pageTitle="About Me">
+    <Layout>
       <div className={aboutContainer}>
         <StaticImage
           src="../images/profile-pic.jpg"
@@ -27,12 +26,6 @@ const AboutPage = () => {
           <p> Looking ahead, my goals are two-fold. Personally, I am committed to giving back to Antigua and Barbuda, a place that has shaped me profoundly. Professionally, I aspire to reach the pinnacle of the corporate world as a C Suite Officer, making a positive impact through leadership, integrity, and innovation. </p>
           <p> As I move forward, I carry with me the lessons learned, the experiences gained, and a burning passion to make a difference. My journey continues, and I am ready to leave an indelible mark on the world. </p>
         </div>
-      </div>
-      <div className={additionalInfo}>
-        <h3>Additional Information</h3>
-        <p>
-          Here you can add more detailed information about your professional journey, personal interests, or any other relevant details you want to share.
-        </p>
       </div>
     </Layout>
   )
