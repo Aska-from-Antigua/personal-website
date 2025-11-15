@@ -7,30 +7,14 @@ import {
   resumeHeader,
   downloadButton,
   pdfViewer,
+  mobileMessage,
 } from './resume.module.css'
 
 const ResumePage = () => {
-  const [isDark, setIsDark] = useState(true)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    // Check theme on mount and when it changes
-    const checkTheme = () => {
-      const savedTheme = localStorage.getItem('theme')
-      setIsDark(!savedTheme || savedTheme === 'dark')
-    }
-
-    checkTheme()
-
-    // Listen for storage changes (theme toggle)
-    window.addEventListener('storage', checkTheme)
-
-    // Poll for theme changes (since we're on the same page)
-    const interval = setInterval(checkTheme, 100)
-
-    return () => {
-      window.removeEventListener('storage', checkTheme)
-      clearInterval(interval)
-    }
+    setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
   }, [])
 
   return (
@@ -42,12 +26,20 @@ const ResumePage = () => {
             Download PDF
           </a>
         </div>
-        <iframe
-          src={`/${isDark ? 'resume-dark' : 'resume'}.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
-          className={pdfViewer}
-          title="Jerry Aska Resume"
-          key={isDark ? 'dark' : 'light'}
-        />
+        {isMobile ? (
+          <div className={mobileMessage}>
+            <p>PDF preview is not available on mobile browsers.</p>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={downloadButton}>
+              Open PDF in New Tab
+            </a>
+          </div>
+        ) : (
+          <iframe
+            src="/resume-dark.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+            className={pdfViewer}
+            title="Jerry Aska Resume"
+          />
+        )}
       </div>
     </Layout>
   )

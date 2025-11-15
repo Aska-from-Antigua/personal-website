@@ -63,15 +63,6 @@ const Layout = ({ pageTitle, children }) => {
             <li className={navLinkItem}>
               <Link to="/media" className={navLinkText}>Media</Link>
             </li>
-            <li className={navLinkItem}>
-              <button
-                onClick={toggleTheme}
-                className={themeToggle}
-                aria-label="Toggle theme"
-              >
-                {isDark ? '☀️' : '🌙'}
-              </button>
-            </li>
           </ul>
         </nav>
       </header>
