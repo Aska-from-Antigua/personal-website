@@ -48,7 +48,18 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div className={`${container} ${!isDark ? lightMode : ''}`}>
       <header className={header}>
-        <div className={siteTitle}>{data.site.siteMetadata.title}</div>
+        <div className={siteTitle}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" style={{marginRight: '-16px', marginTop: '-4px'}}>
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style={{stopColor:'#6366f1',stopOpacity:1}} />
+                <stop offset="100%" style={{stopColor:'#8b5cf6',stopOpacity:1}} />
+              </linearGradient>
+            </defs>
+            <text x="50" y="72" fontFamily="Montserrat, sans-serif" fontSize="60" fontWeight="700" textAnchor="middle" fill="url(#logoGrad)">J</text>
+          </svg>
+          <span>erry Aska</span>
+        </div>
         <nav>
           <ul className={navLinks}>
             <li className={navLinkItem}>

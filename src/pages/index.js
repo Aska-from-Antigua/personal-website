@@ -75,10 +75,7 @@ const IndexPage = () => {
       <section className={introSection}>
         <h2>Welcome</h2>
         <p>
-          I'm a Software Development Engineer on the AWS Wickr team.
-        </p>
-        <p>
-          I work on distributed systems, secure messaging infrastructure, and Kubernetes-based backend services. I care about building reliable systems, writing clean abstractions, and creating tools that make teams more effective.
+          I'm a Software Development Engineer at Amazon Web Services, where I work on distributed systems, secure messaging infrastructure, and Kubernetes-based backend services. I care about building reliable systems, writing clean abstractions, and creating tools that make teams more effective.
         </p>
         <p>
           I was born and raised in Antigua, where I taught students and mentored kids before moving into engineering. That background shaped how I think about leadership, clarity, and community — qualities I bring into every team I join.
@@ -97,8 +94,8 @@ const IndexPage = () => {
             subtitle="Building the future"
             backContent={
               <>
-                <h4>SDE II</h4>
-                <p><strong>AWS Wickr • 2023 - Present</strong></p>
+                <h4>Software Development Engineer II</h4>
+                <p><strong>Amazon Web Services • 2023 - Present</strong></p>
                 <p>I work on backend systems powering Wickr's secure messaging platform, including Kubernetes infrastructure, API services, and distributed storage components.</p>
                 <p>I also drive cultural impact — organizing social events, supporting onboarding, and contributing to a stronger Wickr NYC team culture.</p>
                 <p><Link to="/resume" onClick={(e) => e.stopPropagation()} style={{color: '#6366f1', textDecoration: 'underline', fontWeight: '600'}}>→ View Full Resume</Link></p>

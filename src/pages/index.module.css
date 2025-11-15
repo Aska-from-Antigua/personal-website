@@ -138,6 +138,12 @@
   transform: translateY(-8px);
 }
 
+.card:hover .cardFront::after {
+  opacity: 1;
+  border-color: rgba(99, 102, 241, 0.6);
+  background: rgba(99, 102, 241, 0.2);
+}
+
 .cardInner {
   position: relative;
   width: 100%;
@@ -198,6 +204,8 @@
   text-align: center;
   margin: 0;
 }
+
+
 
 .cardContent {
   color: #e8eaf6;

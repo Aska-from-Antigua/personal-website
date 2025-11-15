@@ -17,13 +17,13 @@ const Seo = ({ title, description, image, url }) => {
   const siteTitle = data.site.siteMetadata.title
   const siteUrl = data.site.siteMetadata.siteUrl
 
-  const defaultDescription = "Jerry Aska is a Software Development Engineer at AWS Wickr, a proud Antiguan focused on secure messaging, distributed systems, and community impact through education and philanthropy."
+  const defaultDescription = "Jerry Aska is a Software Development Engineer at Amazon Web Services, a proud Antiguan focused on secure messaging, distributed systems, and community impact through education and philanthropy."
   const defaultImage = `${siteUrl}/og-image.png`
 
   const metaDescription = description || defaultDescription
   const metaImage = image || defaultImage
   const metaUrl = url || siteUrl
-  const pageTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} – Software Development Engineer @ AWS Wickr`
+  const pageTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} – Software Development Engineer @ AWS`
 
   return (
     <Helmet htmlAttributes={{ lang: 'en' }}>

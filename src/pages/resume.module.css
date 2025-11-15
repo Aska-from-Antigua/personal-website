@@ -70,10 +70,8 @@
     font-size: 1.8rem;
   }
 
-  .downloadButton {
-    width: 100%;
-    text-align: center;
-    padding: 0.875rem 1.5rem;
+  .resumeHeader .downloadButton {
+    display: none;
   }
 
   .pdfViewer {
