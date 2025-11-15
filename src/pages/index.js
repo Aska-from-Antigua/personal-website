@@ -75,15 +75,16 @@ const IndexPage = () => {
       <section className={introSection}>
         <h2>Welcome</h2>
         <p>
-          I'm a Software Development Engineer at AWS Wickr.
+          I'm a Software Development Engineer on the AWS Wickr team.
         </p>
         <p>
-          My journey from teaching in Antigua to engineering in New York has
-          shaped my commitment to education, technology, and giving back to my
-          community.
-          Whether it's through code, mentorship, or supporting the next
-          generation of Antiguan students, I believe in using my skills to
-          make a meaningful impact.
+          I work on distributed systems, secure messaging infrastructure, and Kubernetes-based backend services. I care about building reliable systems, writing clean abstractions, and creating tools that make teams more effective.
+        </p>
+        <p>
+          I was born and raised in Antigua, where I taught students and mentored kids before moving into engineering. That background shaped how I think about leadership, clarity, and community — qualities I bring into every team I join.
+        </p>
+        <p>
+          I split my time between building software, supporting the next generation of Antiguan students, and exploring big ideas through long-term projects.
         </p>
       </section>
 
@@ -96,10 +97,11 @@ const IndexPage = () => {
             subtitle="Building the future"
             backContent={
               <>
-                <h4>Software Development Engineer II</h4>
-                <p><strong>AWS Wickr | July 2023 - Present</strong></p>
-                <p>I'm a Software Development Engineer at AWS Wickr, where I focus on backend systems and improving the stability of our Kubernetes infrastructure. Beyond the code, I've become the unofficial social chair for our office—because building great software is easier when the team actually enjoys working together.</p>
-                <p><Link to="/resume" onClick={(e) => e.stopPropagation()} style={{color: '#6366f1', textDecoration: 'underline', fontWeight: '600'}}>View Full Resume →</Link></p>
+                <h4>SDE II</h4>
+                <p><strong>AWS Wickr • 2023 - Present</strong></p>
+                <p>I work on backend systems powering Wickr's secure messaging platform, including Kubernetes infrastructure, API services, and distributed storage components.</p>
+                <p>I also drive cultural impact — organizing social events, supporting onboarding, and contributing to a stronger Wickr NYC team culture.</p>
+                <p><Link to="/resume" onClick={(e) => e.stopPropagation()} style={{color: '#6366f1', textDecoration: 'underline', fontWeight: '600'}}>→ View Full Resume</Link></p>
               </>
             }
           />
@@ -136,9 +138,9 @@ const IndexPage = () => {
             subtitle="Giving back home"
             backContent={
               <>
-                <h4>Villa School Scholarship</h4>
-                <p><strong>Annual $1,000 USD Award | Established 2024</strong></p>
-                <p>I established an annual $1,000 scholarship at Villa Primary School in Antigua in 2024. It's the same school where I volunteered from 2016-2018, teaching and mentoring students. Giving back to the community that shaped me is important—it's my way of keeping the door open for the next generation.</p>
+                <h4>Annual Aska Award</h4>
+                <p><strong>Villa Primary School | Established 2024</strong></p>
+                <p>I established a $1,000 annual scholarship at Villa Primary School in Antigua in 2024. It's the same school where I volunteered from 2016-2018, teaching and mentoring students. Giving back to the community that shaped me is important—it's my way of keeping the door open for the next generation.</p>
               </>
             }
           />
@@ -148,6 +150,6 @@ const IndexPage = () => {
   )
 }
 
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo />
 
 export default IndexPage

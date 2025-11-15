@@ -6,6 +6,8 @@ import {
   aboutContainer,
   profileImage,
   aboutText,
+  divider,
+  pullQuote,
 } from './about.module.css'
 
 const AboutPage = () => {
@@ -19,18 +21,41 @@ const AboutPage = () => {
         />
         <div className={aboutText}>
           <h2>About Me</h2>
-          <p> I am Jerry Aska, from Antigua. I grew up in the Point and Villa Community, and was fortunate to have a loving family and a supportive church, the Bible Speaks Seventh Day Adventist church. </p>
-          <p> Education played a significant role in my life. I first attended the Kids Unlimited School for primary education, then went on to graduated with an Associates Degree in Mathematics from St. Anthony's Secondary School. While a secondary school student, I discovered a passion for teaching and began sharing knowledge with those around me through study sessions and volunteer classes at my church and local primary school. These experiences would eventually help me secure a one year tenure as a full time teacher at my alma mater as I prepared for university. I enjoyed being able to work with my students and help the mold themselves into the persons they wanted to become. </p>
-          <p> As a teacher, I noticed that even though I was a role model for my students, I hadn’t yet discovered the role I wanted to play in life. I built a desire for new experiences and to find my purpose. I wanted to pursue further education somewhere that would expose me to new peoples and experiences. And thus, I pursued a Bachelor of Science in Computer Engineering at New York University's Tandon School of Engineering. This helped me not only build my technical and communication skills but also helped expand my world view and build communities that I will cherish for a lift time. While at NYU I did not forget about my passion for teaching and by my junior year, I found myself became the lead teaching assistant for Computer Architecture and Design. As lead I took great care over my students and developed supplemental materials to assist them. </p>
-          <p> Outside of academics, chess has been a beloved pursuit of mine since my high school days. I first learnt how to play when I was 12, and at my peak I became the national champion of Antigua and Barbuda in 2018 and represented the country at the Batumi World Chess Olympiad that same year. Despite the team’s overall performance, I showcased my dedication and skill being the top performing member of my team. </p>
-          <p> Looking ahead, my goals are two-fold. Personally, I am committed to giving back to Antigua and Barbuda, a place that has shaped me profoundly. Professionally, I aspire to reach the pinnacle of the corporate world as a C Suite Officer, making a positive impact through leadership, integrity, and innovation. </p>
-          <p> As I move forward, I carry with me the lessons learned, the experiences gained, and a burning passion to make a difference. My journey continues, and I am ready to leave an indelible mark on the world. </p>
+          <p>I'm Jerry Aska — an engineer, chess player, teacher, and proud Antiguan.</p>
+
+          <div className={divider}></div>
+
+          <p>My story starts in Villa, Antigua, where I taught students, mentored kids, and spent afternoons helping people understand math, computers, or whatever they were struggling with. Those early moments shaped how I communicate, how I lead, and how I view responsibility.</p>
+
+          <p>When I moved to New York to study Computer Engineering at NYU, that mindset came with me. I eventually served as Lead TA for Computer Architecture, guiding 160 students while coordinating a team of TAs.</p>
+
+          <blockquote className={pullQuote}>
+            "Teaching kept me grounded — no matter how complex a system gets, you should still be able to explain it simply."
+          </blockquote>
+
+          <div className={divider}></div>
+
+          <p>Now I'm a software engineer working on backend and infrastructure-level problems. I like systems that require clarity, reliability, and long-term thinking — whether that's distributed services or the tools that keep teams aligned.</p>
+
+          <p>Beyond work, I'm committed to giving back. In 2024, I started an annual scholarship at Villa Primary School, the same place where I taught. I also continue to mentor students and help where I can.</p>
+
+          <div className={divider}></div>
+
+          <p>Chess has also been a major part of my life. In 2018 I became the national champion of Antigua and Barbuda and represented my country at the Batumi World Chess Olympiad.</p>
+
+          <blockquote className={pullQuote}>
+            "The lessons from chess — patience, structure, calculated risks — are part of how I approach engineering and life."
+          </blockquote>
+
+          <div className={divider}></div>
+
+          <p>I'm building a career and a future that stay true to where I'm from — mixing engineering, community, and long-term thinking in everything I do.</p>
         </div>
       </div>
     </Layout>
   )
 }
 
-export const Head = () => <Seo title="About Me" />
+export const Head = () => <Seo title="About" description="Learn about Jerry Aska's journey from teaching in Antigua to software engineering at AWS, including his passion for education, chess, and community impact." />
 
 export default AboutPage

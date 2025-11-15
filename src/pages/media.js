@@ -63,6 +63,6 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <Seo title="Media" />
+export const Head = () => <Seo title="Media" description="Articles, posts, and features about Jerry Aska from around the web." />
 
 export default MediaPage

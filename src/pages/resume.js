@@ -45,6 +45,6 @@ const ResumePage = () => {
   )
 }
 
-export const Head = () => <Seo title="Resume" />
+export const Head = () => <Seo title="Resume" description="View Jerry Aska's professional resume - Software Development Engineer with experience in backend systems, Kubernetes, and AWS infrastructure." />
 
 export default ResumePage
