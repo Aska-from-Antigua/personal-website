@@ -61,6 +61,9 @@ const Layout = ({ pageTitle, children }) => {
               <Link to="/resume" className={navLinkText}>Resume</Link>
             </li>
             <li className={navLinkItem}>
+              <Link to="/media" className={navLinkText}>Media</Link>
+            </li>
+            <li className={navLinkItem}>
               <button
                 onClick={toggleTheme}
                 className={themeToggle}

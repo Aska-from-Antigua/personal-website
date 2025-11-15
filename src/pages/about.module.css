@@ -72,21 +72,24 @@
 
 @media (max-width: 768px) {
   .aboutContainer {
-    margin: 6rem 1rem 2rem;
+    margin: 7rem 1rem 6rem;
     padding: 2rem 1.5rem;
   }
 
   .profileImage {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2rem;
   }
 
   .aboutText h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
   }
 
   .aboutText p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
   }
 }
 

@@ -221,24 +221,41 @@
 }
 
 @media (max-width: 768px) {
+  .heroText h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroText p {
+    font-size: 1rem;
+  }
+
+  .scrollIndicator {
+    margin-top: 2rem;
+  }
+
+  .scrollIndicator span {
+    font-size: 2rem;
+  }
+
   .introSection {
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem;
   }
 
   .introSection h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .introSection p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .highlightsSection {
-    padding: 3rem 1.5rem 6rem;
+    padding: 2rem 1rem 8rem;
   }
 
   .highlightsSection h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
   }
 
   .cardsGrid {
@@ -247,7 +264,34 @@
   }
 
   .card {
-    height: 320px;
+    height: auto;
+    min-height: 280px;
+  }
+
+  .cardFront,
+  .cardBack {
+    padding: 2rem 1.5rem;
+  }
+
+  .cardIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+
+  .cardSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .cardContent h4 {
+    font-size: 1.1rem;
+  }
+
+  .cardContent p {
+    font-size: 0.9rem;
   }
 }
 
