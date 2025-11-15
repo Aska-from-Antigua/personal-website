@@ -1,5 +1,5 @@
 const axios = require('axios')
-const cheerio = require('cheerio')
+const { parse } = require('node-html-parser')
 const mediaLinks = require('./src/data/mediaLinks')
 
 async function fetchMetadata(url) {
@@ -11,21 +11,23 @@ async function fetchMetadata(url) {
       timeout: 10000
     })
 
-    const $ = cheerio.load(data)
+    const root = parse(data)
+
+    const getMetaContent = (property, name) => {
+      const metaProperty = root.querySelector(`meta[property="${property}"]`)
+      const metaName = root.querySelector(`meta[name="${name}"]`)
+      return metaProperty?.getAttribute('content') || metaName?.getAttribute('content') || ''
+    }
 
     return {
-      title: $('meta[property="og:title"]').attr('content') ||
-             $('meta[name="twitter:title"]').attr('content') ||
-             $('title').text() ||
+      title: getMetaContent('og:title', 'twitter:title') ||
+             root.querySelector('title')?.text ||
              'No title',
-      description: $('meta[property="og:description"]').attr('content') ||
-                   $('meta[name="twitter:description"]').attr('content') ||
-                   $('meta[name="description"]').attr('content') ||
+      description: getMetaContent('og:description', 'twitter:description') ||
+                   getMetaContent('description', 'description') ||
                    '',
-      image: $('meta[property="og:image"]').attr('content') ||
-             $('meta[name="twitter:image"]').attr('content') ||
-             '',
-      siteName: $('meta[property="og:site_name"]').attr('content') ||
+      image: getMetaContent('og:image', 'twitter:image') || '',
+      siteName: getMetaContent('og:site_name', 'og:site_name') ||
                 new URL(url).hostname ||
                 '',
     }
