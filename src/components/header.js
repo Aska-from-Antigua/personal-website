@@ -9,7 +9,7 @@ import {
   themeToggle,
 } from './layout.module.css'
 
-const Header = ({ isDark, toggleTheme }) => {
+const Header = ({ isDark, toggleTheme, isHidden }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -21,7 +21,7 @@ const Header = ({ isDark, toggleTheme }) => {
   `)
 
   return (
-    <header className={header}>
+    <header className={`${header} ${isHidden ? 'headerHidden' : ''}`}>
       <div className={siteTitle}>{data.site.siteMetadata.title}</div>
       <nav>
         <ul className={navLinks}>

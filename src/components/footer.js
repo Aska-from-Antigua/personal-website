@@ -6,9 +6,9 @@ import {
   footerLink,
 } from './layout.module.css'
 
-const Footer = () => {
+const Footer = ({ isHidden }) => {
   return (
-    <footer className={footer}>
+    <footer className={`${footer} ${isHidden ? 'footerHidden' : ''}`}>
       <div className={footerContent}>
         <p>© {new Date().getFullYear()} Jerry Aska</p>
         <div className={footerLinks}>

@@ -22,17 +22,14 @@ const NotFoundPage = () => {
         <div className={notFoundContent}>
           <h1 className={notFoundTitle}>404</h1>
           <p className={notFoundText}>
-            Alas! The page thou seekest hath vanished into the digital abyss.
-          </p>
-          <p className={notFoundText}>
-            Pray, accept this feline offering as recompense for thy troubles. 🐱
+            Alas! The page thou seekest hath vanished into the digital abyss. Pray, accept this feline offering as recompense for thy troubles. 🐱
           </p>
           <div
             onClick={getNewCat}
             style={{
               position: 'relative',
               width: '100%',
-              maxWidth: '400px',
+              maxWidth: '340px',
               margin: '2rem auto 0',
               cursor: 'pointer',
               borderRadius: '16px',
@@ -42,7 +39,7 @@ const NotFoundPage = () => {
             }}
           >
             <img
-              src={`https://cataas.com/cat?width=400&height=400&t=${catKey}`}
+              src={`https://cataas.com/cat?width=340&height=340&t=${catKey}`}
               alt="Random cat"
               style={{
                 width: '100%',
@@ -65,6 +62,9 @@ const NotFoundPage = () => {
               Click for a new cat →
             </div>
           </div>
+          <p className={notFoundText} style={{ marginTop: '2rem' }}>
+            <a href="/sitemap-index.xml" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>View sitemap</a>
+          </p>
         </div>
       </div>
     </Layout>

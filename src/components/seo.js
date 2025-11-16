@@ -29,6 +29,8 @@ const Seo = ({ title, description, image, url }) => {
     <Helmet htmlAttributes={{ lang: 'en' }}>
       <title>{pageTitle}</title>
       <meta name="description" content={metaDescription} />
+      <meta name="theme-color" content="#0a0e27" media="(prefers-color-scheme: dark)" />
+      <meta name="theme-color" content="#f5e6e6" media="(prefers-color-scheme: light)" />
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />

@@ -1,0 +1,12 @@
+# Netlify configuration
+
+# Redirect all 404s to custom 404 page
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Build settings
+[build]
+  publish = "public"
+  command = "npm run build"

@@ -9,6 +9,18 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Jerry Aska',
+        short_name: 'Jerry Aska',
+        start_url: '/',
+        background_color: '#0a0e27',
+        theme_color: '#6366f1',
+        display: 'standalone',
+        icon: 'static/favicon.svg',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         excludes: ['/blog/', '/calculator/', '/contact/', '/projects/'],
