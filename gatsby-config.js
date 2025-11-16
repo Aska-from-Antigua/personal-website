@@ -8,7 +8,36 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        excludes: ['/blog/', '/calculator/', '/contact/', '/projects/'],
+        serialize: ({ path }) => {
+          // Homepage gets highest priority
+          if (path === '/') {
+            return {
+              url: path,
+              changefreq: 'weekly',
+              priority: 1.0,
+            }
+          }
+          // Media page changes when you add new links
+          if (path === '/media/') {
+            return {
+              url: path,
+              changefreq: 'monthly',
+              priority: 0.8,
+            }
+          }
+          // About and Resume change less frequently
+          return {
+            url: path,
+            changefreq: 'monthly',
+            priority: 0.7,
+          }
+        },
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
