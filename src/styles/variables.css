@@ -1,0 +1,84 @@
+:root {
+  /* Primary Colors */
+  --color-primary: #6366f1;
+  --color-primary-light: #8b5cf6;
+  --color-primary-dark: #4f46e5;
+
+  /* Background Colors - Dark Mode */
+  --bg-primary: #0a0e27;
+  --bg-secondary: rgba(15, 20, 40, 0.6);
+  --bg-tertiary: rgba(15, 20, 40, 0.9);
+
+  /* Text Colors - Dark Mode */
+  --text-primary: #ffffff;
+  --text-secondary: #c5cae9;
+  --text-tertiary: #9fa8da;
+  --text-muted: #e8eaf6;
+
+  /* Border Colors */
+  --border-primary: rgba(99, 102, 241, 0.2);
+  --border-hover: rgba(99, 102, 241, 0.5);
+  --border-light: rgba(99, 102, 241, 0.3);
+
+  /* Shadow */
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  --gradient-text: linear-gradient(135deg, #ffffff 0%, #c5cae9 100%);
+  --gradient-overlay: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, rgba(10, 14, 39, 0.8) 70%);
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.6s ease;
+}
+
+/* Light Mode Overrides - Red Theme */
+.lightMode {
+  /* Primary Colors - Red for light mode */
+  --color-primary: #dc2626;
+  --color-primary-light: #ef4444;
+  --color-primary-dark: #b91c1c;
+
+  /* Background Colors - Light Mode */
+  --bg-primary: #fff5f5;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: rgba(255, 245, 245, 0.95);
+
+  /* Text Colors - Light Mode */
+  --text-primary: #7f1d1d;
+  --text-secondary: #991b1b;
+  --text-tertiary: #b91c1c;
+  --text-muted: #991b1b;
+
+  /* Border Colors - Light Mode */
+  --border-primary: rgba(220, 38, 38, 0.15);
+  --border-hover: rgba(220, 38, 38, 0.3);
+  --border-light: rgba(220, 38, 38, 0.2);
+
+  /* Shadow - Light Mode */
+  --shadow-sm: 0 2px 8px rgba(220, 38, 38, 0.08);
+  --shadow-md: 0 4px 15px rgba(220, 38, 38, 0.12);
+  --shadow-lg: 0 8px 24px rgba(220, 38, 38, 0.15);
+
+  /* Gradients - Light Mode */
+  --gradient-primary: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  --gradient-text: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%);
+  --gradient-overlay: radial-gradient(ellipse at center, rgba(220, 38, 38, 0.05) 0%, rgba(255, 245, 245, 0.3) 70%);
+}

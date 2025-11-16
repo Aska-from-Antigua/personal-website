@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { useState } from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import FlipCard from '../components/FlipCard'
 import { StaticImage } from 'gatsby-plugin-image'
 import {
   heroSection,
@@ -13,43 +13,7 @@ import {
   introSection,
   highlightsSection,
   cardsGrid,
-  card,
-  cardInner,
-  cardFlipped,
-  cardFront,
-  cardBack,
-  cardIcon,
-  cardTitle,
-  cardSubtitle,
-  cardContent,
 } from './index.module.css'
-
-const FlipCard = ({ icon, title, subtitle, backContent }) => {
-  const [isFlipped, setIsFlipped] = useState(false)
-
-  return (
-    <div
-      className={`${card} ${isFlipped ? cardFlipped : ''}`}
-      onClick={() => setIsFlipped(!isFlipped)}
-      onKeyDown={(e) => e.key === 'Enter' && setIsFlipped(!isFlipped)}
-      role="button"
-      tabIndex={0}
-    >
-      <div className={cardInner}>
-        <div className={cardFront}>
-          <div className={cardIcon}>{icon}</div>
-          <h3 className={cardTitle}>{title}</h3>
-          <p className={cardSubtitle}>{subtitle}</p>
-        </div>
-        <div className={cardBack}>
-          <div className={cardContent}>
-            {backContent}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 const IndexPage = () => {
   return (

@@ -1,0 +1,138 @@
+.card {
+  height: 350px;
+  cursor: pointer;
+  perspective: 1000px;
+  transition: transform var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card:hover .cardFront::after {
+  opacity: 1;
+  border-color: var(--border-hover);
+  background: var(--border-primary);
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition-slow);
+  transform-style: preserve-3d;
+  transform-origin: center center;
+}
+
+.cardFlipped .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-primary);
+  box-shadow: var(--shadow-lg);
+  box-sizing: border-box;
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  padding: var(--spacing-lg);
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.cardIcon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  text-align: center;
+}
+
+.cardSubtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin: 0;
+}
+
+.cardContent {
+  color: var(--text-muted);
+  text-align: left;
+  width: 100%;
+}
+
+.cardContent h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  margin-top: 0;
+}
+
+.cardContent p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.cardContent strong {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+    min-height: 320px;
+    max-width: 100%;
+  }
+
+  .cardFront,
+  .cardBack {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .cardIcon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+
+  .cardSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .cardContent h4 {
+    font-size: 1.1rem;
+  }
+
+  .cardContent p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Light mode uses CSS variables automatically - no overrides needed! */
