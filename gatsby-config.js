@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Jerry Aska',
-    siteUrl: 'https://site.jerryaska.com',
+    siteUrl: 'https://jerryaska.com',
     description: 'Software Development Engineer at Amazon Web Services, proud Antiguan focused on distributed systems, secure messaging infrastructure, and community impact.',
   },
   plugins: [

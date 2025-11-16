@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://site.jerryaska.com/sitemap-index.xml
+Sitemap: https://jerryaska.com/sitemap-index.xml
