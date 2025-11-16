@@ -1,10 +1,8 @@
 import * as React from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import { StaticImage } from 'gatsby-plugin-image'
 import {
   aboutContainer,
-  profileImage,
   aboutText,
   divider,
   pullQuote,
@@ -14,11 +12,6 @@ const AboutPage = () => {
   return (
     <Layout>
       <div className={aboutContainer}>
-        <StaticImage
-          src="../images/profile-pic.jpg"
-          alt="Profile picture of Jerry Aska"
-          className={profileImage}
-        />
         <div className={aboutText}>
           <h2>About Me</h2>
           <p>I'm Jerry Aska — an engineer, chess player, teacher, and proud Antiguan.</p>
