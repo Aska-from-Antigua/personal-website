@@ -18,7 +18,7 @@ const AboutPage = () => {
 
           <div className={divider}></div>
 
-          <p>My story starts in Villa, Antigua, where I taught students, mentored kids, and spent afternoons helping people understand math, computers, or whatever they were struggling with. Those early moments shaped how I communicate, how I lead, and how I view responsibility.</p>
+          <p>My story starts in Point Antigua, where I taught students, mentored kids, and spent afternoons helping people understand math, computers, or whatever they were struggling with. Those early moments shaped how I communicate, how I lead, and how I view responsibility.</p>
 
           <p>When I moved to New York to study Computer Engineering at NYU, that mindset came with me. I eventually served as Lead TA for Computer Architecture, guiding 160 students while coordinating a team of TAs.</p>
 

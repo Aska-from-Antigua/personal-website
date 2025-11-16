@@ -57,7 +57,7 @@ const ResumePage = () => {
         {isMobile ? (
           <div className={mobileMessage}>
             <p>PDF preview is not available on mobile browsers.</p>
-            <a href={resumePdf} target="_blank" rel="noopener noreferrer" className={downloadButton}>
+            <a href="/resume-light.pdf" target="_blank" rel="noopener noreferrer" className={downloadButton}>
               Open PDF in New Tab
             </a>
           </div>

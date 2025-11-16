@@ -57,9 +57,9 @@
   --color-primary-dark: #b91c1c;
 
   /* Background Colors - Light Mode */
-  --bg-primary: #fff5f5;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: rgba(255, 245, 245, 0.95);
+  --bg-primary: #f5e6e6;
+  --bg-secondary: #fce8e8;
+  --bg-tertiary: rgba(252, 232, 232, 0.95);
 
   /* Text Colors - Light Mode */
   --text-primary: #7f1d1d;
