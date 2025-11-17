@@ -1,49 +1,46 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# jerryaska.com
 
-## 🚀 Quick start
+My personal website and portfolio.
 
-1.  **Create a Gatsby site.**
+## What's Here
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+- **About**: My journey from teaching in Antigua to engineering at AWS
+- **Resume**: My professional experience and background
+- **Media**: Articles and features about my work
+- **404 Page**: Because even errors deserve a little personality (and cats)
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## Tech Stack
 
-2.  **Start developing.**
+- **Gatsby** - Static site generation
+- **React** - Component architecture
+- **CSS Modules** - Scoped styling with CSS variables for theming
+- **Netlify** - Hosting and deployment
+- **Simple Analytics** - Privacy-friendly visitor tracking
 
-    Navigate into your new site’s directory and start it up.
+## Features
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+- 🌓 Dark/light mode toggle with persistent preferences
+- 📱 Mobile-responsive with scroll-aware header/footer
+- 🎨 Custom theme system with CSS variables
+- 🐱 Interactive 404 page with random cats
+- 📊 PWA support for installable app experience
+- 🔍 SEO optimized with Open Graph tags
 
-3.  **Open the code and start customizing!**
+## Running Locally
 
-    Your site is now running at http://localhost:8000!
+```bash
+npm install
+npm run develop
+```
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+Visit `http://localhost:8000`
 
-4.  **Learn more**
+## Building
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```bash
+npm run build
+```
 
-## 🚀 Quick start (Netlify)
+---
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Built with [Kiro](https://kiro.dev) & [Gatsby](https://www.gatsbyjs.com) • Hosted on [Netlify](https://www.netlify.com) • Domain via [Squarespace](https://www.squarespace.com)

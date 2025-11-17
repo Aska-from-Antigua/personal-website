@@ -23,7 +23,6 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        excludes: ['/blog/', '/calculator/', '/contact/', '/projects/'],
         serialize: ({ path }) => {
           // Homepage gets highest priority
           if (path === '/') {
