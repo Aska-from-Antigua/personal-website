@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const Seo = ({ title, description, image, url }) => {
+  const [themeColor, setThemeColor] = React.useState('#0a0e27')
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -13,6 +15,25 @@ const Seo = ({ title, description, image, url }) => {
       }
     }
   `)
+
+  // Update theme color based on user's toggle
+  React.useEffect(() => {
+    const updateThemeColor = () => {
+      const savedTheme = localStorage.getItem('theme')
+      const isDark = savedTheme === 'dark' || !savedTheme
+      setThemeColor(isDark ? '#0a0e27' : '#f5e6e6')
+    }
+
+    updateThemeColor()
+
+    // Listen for theme changes
+    const handleThemeChange = (e) => {
+      setThemeColor(e.detail.isDark ? '#0a0e27' : '#f5e6e6')
+    }
+    window.addEventListener('themeChange', handleThemeChange)
+
+    return () => window.removeEventListener('themeChange', handleThemeChange)
+  }, [])
 
   const siteTitle = data.site.siteMetadata.title
   const siteUrl = data.site.siteMetadata.siteUrl
@@ -29,8 +50,9 @@ const Seo = ({ title, description, image, url }) => {
     <Helmet htmlAttributes={{ lang: 'en' }}>
       <title>{pageTitle}</title>
       <meta name="description" content={metaDescription} />
-      <meta name="theme-color" content="#0a0e27" media="(prefers-color-scheme: dark)" />
-      <meta name="theme-color" content="#f5e6e6" media="(prefers-color-scheme: light)" />
+      <meta name="theme-color" content={themeColor} />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />
