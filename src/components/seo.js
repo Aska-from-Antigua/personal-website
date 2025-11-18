@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const Seo = ({ title, description, image, url }) => {
@@ -47,7 +46,8 @@ const Seo = ({ title, description, image, url }) => {
   const pageTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} – Software Development Engineer @ AWS`
 
   return (
-    <Helmet htmlAttributes={{ lang: 'en' }}>
+    <>
+      <html lang="en" />
       <title>{pageTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="theme-color" content={themeColor} />
@@ -74,7 +74,7 @@ const Seo = ({ title, description, image, url }) => {
 
       {/* Simple Analytics - 100% privacy-first analytics */}
       <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-    </Helmet>
+    </>
   )
 }
 
