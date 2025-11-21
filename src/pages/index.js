@@ -111,6 +111,6 @@ const IndexPage = () => {
   )
 }
 
-export const Head = () => <Seo />
+export const Head = () => <Seo pathname="/" />
 
 export default IndexPage

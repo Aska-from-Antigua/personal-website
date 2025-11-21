@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const Seo = ({ title, description, image, url }) => {
+const Seo = ({ title, description, image, pathname }) => {
   const [themeColor, setThemeColor] = React.useState('#0a0e27')
 
   const data = useStaticQuery(graphql`
@@ -38,11 +38,12 @@ const Seo = ({ title, description, image, url }) => {
   const siteUrl = data.site.siteMetadata.siteUrl
 
   const defaultDescription = "Jerry Aska is a Software Development Engineer at Amazon Web Services, a proud Antiguan focused on secure messaging, distributed systems, and community impact through education and philanthropy."
-  const defaultImage = `${siteUrl}/og-image.png`
+  const defaultImage = `${siteUrl}/og-image.jpg`
 
   const metaDescription = description || defaultDescription
   const metaImage = image || defaultImage
-  const metaUrl = url || siteUrl
+  // Construct full URL from siteUrl + pathname (defaults to homepage)
+  const metaUrl = pathname ? `${siteUrl}${pathname}` : siteUrl
   const pageTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} – Software Development Engineer @ AWS`
 
   return (
@@ -67,13 +68,14 @@ const Seo = ({ title, description, image, url }) => {
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={metaImage} />
 
+      <link rel="canonical" href={metaUrl} />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+      {/* Preload critical font for faster rendering */}
+      <link rel="preload" href="/fonts/montserrat-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
 
       {/* Simple Analytics - 100% privacy-first analytics */}
-      <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+      <script defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     </>
   )
 }

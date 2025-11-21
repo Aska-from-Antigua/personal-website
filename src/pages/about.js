@@ -49,6 +49,6 @@ const AboutPage = () => {
   )
 }
 
-export const Head = () => <Seo title="About" description="Learn about Jerry Aska's journey from teaching in Antigua to software engineering at AWS, including his passion for education, chess, and community impact." />
+export const Head = () => <Seo title="About" description="Learn about Jerry Aska's journey from teaching in Antigua to software engineering at AWS, including his passion for education, chess, and community impact." pathname="/about/" />
 
 export default AboutPage

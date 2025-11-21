@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-11-21T03:37:00.211Z",
+  "desktop": {
+    "performance": 76,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100
+  },
+  "mobile": {
+    "performance": 93,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100
+  }
+}
